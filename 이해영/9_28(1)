@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+main() {
+	int m; //정수형
+	char c; //문자형
+
+	for (m = 97; m <= 122; m++)
+		putchar(m); // a~z가 나올꺼임
+	putchar('\n'); // 한 줄 띄우기
+
+	for (m = 'a'; m <= 'z'; m++) // for (m = 97; m <= 122; m++)랑 똑같음
+		putchar(m); // a~z가 나올꺼임
+	putchar('\n'); // 한 줄 띄우기
+
+	for (m = 'a', c = 'a'; m <= 'd'; m++, c++) // 97~100 반복
+		printf("(%c %d %c %d)", m, m, c, c); // 문자 정수 문자 정수이므로 (a 97 a 97) 될꺼임
+	putchar('\n'); // 한 줄 띄우기
+
+	printf("%d\n", 97 / 'a'); // 1 출력
+	printf("%c(%d) %c(%d) %c(%d) %c(%d)\n",'\101', '\101', '\x42', '\x42', '\103', 0103, 0x44, 0x44); // '\' 랑 0이랑 같은 표현(왤까 근데?)
+}
